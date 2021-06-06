@@ -4,7 +4,7 @@ module.exports = {
   mode: "production",
   entry: "./src/index.js",
   output: {
-    path: path.join(__dirname, "public"),
+    path: path.join(__dirname, "dist"),
     filename: "bundle.js",
   },
   module: {
@@ -23,7 +23,7 @@ module.exports = {
         use: ["@svgr/webpack"],
       },
       {
-        test: /\.(gif|png|jep?g)$/i,
+        test: /\.(gif|svg|ico|png|jep?g)$/i,
         use: [
           "file-loader",
           {
